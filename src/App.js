@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 //test
-/sdfwer
+//sdfwer
 
 
 class App extends React.Component {
