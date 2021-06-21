@@ -64,8 +64,6 @@ class App extends React.Component {
                 </div>
                 <button className="cart">Add to cart</button>
 
-
-
               </div>
             </div>
           ))
