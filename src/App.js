@@ -1,10 +1,7 @@
 import React from 'react';
 import './App.css';
-
-//test
-//sdfwer
-//asdfwaqerweerdsfg
-
+import Colors from './components/Colors'
+import DetailsThumb from './components/DetailsThumb';
 
 class App extends React.Component {
   state = {
@@ -23,12 +20,31 @@ class App extends React.Component {
         price: 23,
         colors: ['red', 'blue', 'green'],
         count: 1,
-      },
+      }
     ],
+    index: 0
   };
 
+  myRef = React.createRef();
+  
+  handleTab = index =>{
+    //alert(index)
+    this.setState({index: index})
+    const images = this.myRef.current.children;
+    //Style change when tabbing
+    for(let i=0; i<images.length; i++){
+      images[i].className = images[i].className.replace("active", "");
+    }
+    images[index].className = "active";
+  };
+
+  componentDidMount(){
+    const {index} = this.state;
+    this.myRef.current.children[index].className = "active";
+  }
+
   render() {
-    const { products } = this.state;
+    const {products, index} = this.state;
     //console.log(products);
     return( 
       <div className="app">
@@ -36,7 +52,7 @@ class App extends React.Component {
           products.map(item =>(
             <div className="details" key={item._id}>
               <div className="big-img">
-                <img src={item.src[0]} alt=""/>
+                <img src={item.src[index]} alt=""/>
               </div>
 
               <div className="box">
@@ -45,28 +61,12 @@ class App extends React.Component {
                   <span>${item.price}</span>
                 </div>
 
-                <div className="colors">
-                  {
-                    item.colors.map((color, index) =>(
-                      <button style={{background: color}} key={index}></button>
-
-                    ))
-                  }
-                </div>
+                <Colors colors={item.colors} />
 
                 <p>{item.description}</p>
                 <p>{item.content}</p>
 
-                <div className="thumb">
-                  {
-                    item.src.map((img, index) =>(
-                      <img src={img} alt="" key={index} 
-                      onClick={() => this.handleTab(index)}
-                      />
-                    ))
-                  }
-
-                </div>
+                <DetailsThumb images={item.src} tab={this.handleTab} myRef={this.myRef} />
                 <button className="cart">Add to cart</button>
 
               </div>
