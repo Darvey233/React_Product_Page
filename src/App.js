@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import Colors from './components/Colors'
 import DetailsThumb from './components/DetailsThumb';
+import {BrowserRouter as Router} from 'react-router-dom'
+import Header from './components/Header';
+import Section from './components/Section';
 
 class App extends React.Component {
   state = {
@@ -48,6 +51,14 @@ class App extends React.Component {
     //console.log(products);
     return( 
       <div className="app">
+
+        <Router>
+          <Header />
+          <Section />
+
+        </Router>
+
+
         {
           products.map(item =>(
             <div className="details" key={item._id}>
@@ -73,6 +84,10 @@ class App extends React.Component {
             </div>
           ))
         }
+
+
+    
+
       </div>
     );
   };
