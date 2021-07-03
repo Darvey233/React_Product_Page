@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/React_Product_Page/static/css/main.dc6c5382.chunk.css",
-    "main.js": "/React_Product_Page/static/js/main.7f45d699.chunk.js",
-    "main.js.map": "/React_Product_Page/static/js/main.7f45d699.chunk.js.map",
+    "main.css": "/React_Product_Page/static/css/main.17967596.chunk.css",
+    "main.js": "/React_Product_Page/static/js/main.9079f670.chunk.js",
+    "main.js.map": "/React_Product_Page/static/js/main.9079f670.chunk.js.map",
     "runtime-main.js": "/React_Product_Page/static/js/runtime-main.60c2fa96.js",
     "runtime-main.js.map": "/React_Product_Page/static/js/runtime-main.60c2fa96.js.map",
     "static/js/2.df2705f4.chunk.js": "/React_Product_Page/static/js/2.df2705f4.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.5c0180dc.chunk.js": "/React_Product_Page/static/js/3.5c0180dc.chunk.js",
     "static/js/3.5c0180dc.chunk.js.map": "/React_Product_Page/static/js/3.5c0180dc.chunk.js.map",
     "index.html": "/React_Product_Page/index.html",
-    "static/css/main.dc6c5382.chunk.css.map": "/React_Product_Page/static/css/main.dc6c5382.chunk.css.map",
+    "static/css/main.17967596.chunk.css.map": "/React_Product_Page/static/css/main.17967596.chunk.css.map",
     "static/js/2.df2705f4.chunk.js.LICENSE.txt": "/React_Product_Page/static/js/2.df2705f4.chunk.js.LICENSE.txt",
     "static/media/bars-solid.e8db7520.svg": "/React_Product_Page/static/media/bars-solid.e8db7520.svg",
     "static/media/shopping-cart-solid.d146d6c3.svg": "/React_Product_Page/static/media/shopping-cart-solid.d146d6c3.svg",
@@ -19,7 +19,7 @@
   "entrypoints": [
     "static/js/runtime-main.60c2fa96.js",
     "static/js/2.df2705f4.chunk.js",
-    "static/css/main.dc6c5382.chunk.css",
-    "static/js/main.7f45d699.chunk.js"
+    "static/css/main.17967596.chunk.css",
+    "static/js/main.9079f670.chunk.js"
   ]
 }
