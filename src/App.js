@@ -1,12 +1,16 @@
 import React from 'react';
 import './App.css';
 import Colors from './components/Colors'
-import DetailsThumb from './components/DetailsThumb';
+import DetailsThumb from './components/DetailsThumb'
 import {BrowserRouter as Router} from 'react-router-dom'
-import Header from './components/Header';
-import Section from './components/Section';
+import Header from './components/Header'
+import Section from './components/Section'
+import {DataProvider} from './components/Context'
 
 class App extends React.Component {
+  
+
+  
   state = {
     products: [
       {
@@ -50,45 +54,47 @@ class App extends React.Component {
     const {products, index} = this.state;
     //console.log(products);
     return( 
-      <div className="app">
+      <DataProvider>
+        <div className="app">
 
-        <Router>
-          <Header />
-          <Section />
+          <Router>
+            <Header />
+            <Section />
 
-        </Router>
+          </Router>
 
 
-        {
-          products.map(item =>(
-            <div className="details" key={item._id}>
-              <div className="big-img">
-                <img src={item.src[index]} alt=""/>
-              </div>
-
-              <div className="box">
-                <div className="row">
-                  <h2>{item.title}</h2>
-                  <span>${item.price}</span>
+          {
+            products.map(item =>(
+              <div className="details" key={item._id}>
+                <div className="big-img">
+                  <img src={item.src[index]} alt=""/>
                 </div>
 
-                <Colors colors={item.colors} />
+                <div className="box">
+                  <div className="row">
+                    <h2>{item.title}</h2>
+                    <span>${item.price}</span>
+                  </div>
 
-                <p>{item.description}</p>
-                <p>{item.content}</p>
+                  <Colors colors={item.colors} />
 
-                <DetailsThumb images={item.src} tab={this.handleTab} myRef={this.myRef} />
-                <button className="cart">Add to cart</button>
+                  <p>{item.description}</p>
+                  <p>{item.content}</p>
 
+                  <DetailsThumb images={item.src} tab={this.handleTab} myRef={this.myRef} />
+                  <button className="cart">Add to cart</button>
+
+                </div>
               </div>
-            </div>
-          ))
-        }
+            ))
+          }
 
 
-    
+      
 
-      </div>
+        </div>
+      </DataProvider>
     );
   };
 }

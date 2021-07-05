@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
+import Products from './Section/Product'
+import Details from './section/Details'
+import {Route} from "react-router-dom"
 
 export class Section extends Component {
-  render(){
-
+  render() {
     return (
-      <div className="Section">
-          {
-
-          }
+      <div>
+        Setion
       </div>
     )
   }
