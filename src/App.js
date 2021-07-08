@@ -22,7 +22,7 @@ class App extends React.Component {
               "https://www.abt-sportsline.com/fileadmin/user_upload/ABT_RS3_Nardograu_Heck.jpg"
         
         ],
-        description: 'UI/UX designing, html css tutorials',
+        description: 'This will be a car show product page',
         content: 'Welcome to my product page',
         price: 23,
         colors: ['red', 'blue', 'green'],
