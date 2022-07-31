@@ -35,7 +35,7 @@ export class Header extends Component {
               <img src={Close} alt="" width="20"/>
             </li>
           </ul>
-          <div className="nac-cart">
+          <div className="nav-cart">
             <span>0</span>
             <Link to="/cart">
               <img src={CartIcon} alt="" width="20"/>
